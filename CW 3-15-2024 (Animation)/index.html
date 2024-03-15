@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <style>
+            /*define keyframes as percentage points of the total animation duration*/
+            @keyframes square-to-circle {
+                0% {
+                    border-radius: 0;
+                    transform: rotate(0deg);
+                    margin: 200px auto;
+                    transform: scale(1);
+                }
+                25% {
+                    border-radius: 50% 0 0 0;
+                    transform: rotate(45deg);
+                    margin: 150px auto;
+                    transform: scale(0.5);
+                }
+                50% {
+                    border-radius: 50% 50% 0 0;
+                    transform: rotate(90deg);
+                    margin: 200px auto;
+                    transform: scale(1);
+                }
+                75% {
+                    border-radius: 50% 50% 50% 0;
+                    transform: rotate(135deg);
+                    margin: 250px auto;
+                    transform: scale(0.5);
+                }
+                100% {
+                    border-radius: 50% 50% 50% 50%;
+                    transform: rotate(180deg);
+                    margin: 200px auto;
+                    transform: scale(1);
+                }
+            }
+            /*define the square*/
+            .square {
+                width: 100px;
+                height: 100px;
+                background-image: url("./rick.jpg");
+                background-size: contain;
+                margin: 200px auto;
+                animation-name: square-to-circle;
+                animation-duration: 2s;
+                animation-delay: .5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: cubic-bezier(100, 100, 1, 1);
+                animation-direction: alternate;
+            }
+        </style>
+    </head>
+    <body>
+        <!--Create a space for the square-->
+        <div class="square"></div>
+    </body>
+    <footer>
+
+    </footer>
+</html>
